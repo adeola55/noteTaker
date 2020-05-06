@@ -10,8 +10,9 @@ router.get("/notes",function(req,res){ // matches route "/api/notes" get
 
 router.post("/notes",function(req,res){  //matches route "/api/notes" post route
   console.log("Data from user",req.body);
+ 
   var record ={
-    id:data.length,
+    id: data.length,//(Math.floor(MAth.random()data.length+1))
     title: req.body.title,
     text: req.body.text
   }

@@ -66,6 +66,8 @@ var handleNoteSave = function() {
   $noteTitle.val("")
   $noteText.val(" ")
   getAndRenderNotes();
+  $saveNoteBtn.hide();
+  $noteText.attr("placeholder","Enter Notes here")
 };
 
 
@@ -89,7 +91,8 @@ var handleNoteDelete = function(event) {
     console.log("delete")
   });
   getAndRenderNotes();
- 
+  $saveNoteBtn.hide();
+  $("noteText").attr("placeholder","Enter Notes here")
 };
 
 // // Sets the activeNote and displays it
